@@ -8,27 +8,6 @@ const pubnub = PUBNUB.init({                         
     publish_key   : publish_key,
     subscribe_key : subscribe_key
 });
-
-var ChatHead = React.createClass({
-	render:function(){
-		return (
-			<div className="message-form">
-			<h1>Heading</h1>
-			</div>
-			);
-	}
-});
-var ErrorDisplay = React.createClass({
-	render:function(){
-
-		return (
-				<div className="error">
-					<p>{this.props.error}</p>
-				</div>
-			);
-	}
-});
-
 var ChatBody = React.createClass({
 	render:function(){
 		
