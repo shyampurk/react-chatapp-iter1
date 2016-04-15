@@ -46,7 +46,7 @@ var ChatBody = React.createClass({
 			});
 
 		return (
-				<ul className="collection">			
+				<ul className="collection" id="collection">			
     				{messageList}  
     				  	</ul>	 	
 			);
@@ -102,14 +102,11 @@ var ChatForm = React.createClass({
 
 var Main = React.createClass({
 	scrollDown:function(time){ 
-	 var elem = $('.collection');
+	var elem = document.getElementById('collection');
         $('body').animate({
-            scrollTop: elem.height()
+            scrollTop: elem.scrollHeight
         }, time);
 },  
-func:function(){
-	console.log('wow');
-},
 	 sub:function(){
 	 	pubnub.subscribe({
 		  channel: 'chat_channel',
