@@ -112,7 +112,7 @@ func:function(){
 },
 	 sub:function(){
 	 	pubnub.subscribe({
-		  channel: 'hello_world',
+		  channel: 'chat_channel',
 		  message : function (message, channel) {
 		  	var messages = this.state.data;
     			var newMessages = messages.concat([message]);
@@ -126,7 +126,7 @@ func:function(){
 	 },
 	 pub:function(message){
 		pubnub.publish({
-    		channel: 'hello_world',        
+    		channel: 'chat_channel',        
     		message: message,
     		callback : function(m){
     			// console.log(m);
