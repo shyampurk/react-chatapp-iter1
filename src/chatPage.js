@@ -25,7 +25,7 @@ var ChatBody = React.createClass({
 			});
 
 		return (
-				<ul className="collection" id="collection">			
+				<ul className="collection">			
     				{messageList}  
     				  	</ul>	 	
 			);
@@ -81,9 +81,9 @@ var ChatForm = React.createClass({
 
 var Main = React.createClass({
 	scrollDown:function(time){ 
-	var elem = document.getElementById('collection');
+	 var elem = $('.collection');
         $('body').animate({
-            scrollTop: elem.scrollHeight
+            scrollTop: elem.height()
         }, time);
 },  
 	 sub:function(){
